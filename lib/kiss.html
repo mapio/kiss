@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>KISS</title>
+	<script type="text/javascript">
+		@@@sjcl@@@;
+		var password, data = @@@data@@@;
+		function decode() {
+			document.getElementById( "output" ).innerHTML =
+				sjcl.decrypt( document.forms.password.secret.value, data );
+			return false;
+		}
+	</script>
+	</head>
+	<body>
+		<form action="#" method="post" name="password">
+			<input
+				type="password"
+				name="secret"
+				id="secret"
+				size="32"
+				placeholder="Secret"
+				onchange="return decode();"
+				onKeyPress="if (event.which == 13) return decode();"
+			>
+		</form>
+		<pre style="border: 1pt solid black;" id="output"></pre>
+	</body>
+</html>
