@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var fs = require( 'fs' );
+
+var sjcl_json = JSON.stringify( fs.readFileSync( './lib/sjcl.js' ).toString() );
+var kiss_template = fs.readFileSync( './lib/unkiss.js' ).toString();
+
+var unkiss = kiss_template.replace( /@@@sjcl_json@@@/, sjcl_json );
+
+fs.writeFileSync( 'unkiss', unkiss );
