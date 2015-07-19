@@ -4,7 +4,8 @@
 	<title>KISS</title>
 	<script type="text/javascript">
 		@@@sjcl@@@;
-		var password, data = @@@data@@@;
+		var password;
+		var data = @@@data@@@;
 		function decode() {
 			document.getElementById( "output" ).innerHTML =
 				sjcl.decrypt( document.forms.password.secret.value, data );
