@@ -13,4 +13,4 @@ If you now open `cipher.html` in a (modern) web browser and type `password` in t
 
 If you want to decrypt it you can use the `unkiss` command.
 
-    ./kiss cipher.html password > plain.txt
+    ./unkiss cipher.html password > plain.txt
