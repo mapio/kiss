@@ -1,6 +1,7 @@
 .PHONY: clean deepclean
 
 kiss: ./lib/sjcl.js ./lib/kiss.html ./lib/kiss.js
+	npm list -g | grep readline-sync || npm install readline-sync
 	./lib/make_kiss && chmod u+x ./kiss
 
 unkiss: ./lib/sjcl.js ./lib/unkiss.js
@@ -13,5 +14,5 @@ clean:
 	rm -f ./kiss ./unkiss
 
 deepclean: clean
-	rm -f ./lib/sjcl.js
+	rm -rf ./lib/sjcl.js node_modules
 
