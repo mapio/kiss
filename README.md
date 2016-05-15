@@ -22,5 +22,5 @@ If you want to decrypt it you can use the `unkiss` command.
 
 If you want to decrypt it without saving the password you can use the option `-p`.
 
-	./unkiss cipher.html password > plain.txt
+	./unkiss -p cipher.html password > plain.txt
 	Password: ********
