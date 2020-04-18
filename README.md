@@ -24,3 +24,10 @@ If you want to decrypt it without saving the password you can use the option `-p
 
 	./unkiss -p cipher.html password > plain.txt
 	Password: ********
+
+#### Including external scripts
+
+The optional `-s` parameter allows to include an arbitrary number of comma-separated javascript files into the generated file's head section. This option can be useful if the encrypted content is making use of external scripts.
+
+    ./kiss plain.txt <password OR -p> -s ./script0.js,http://example.com/script1.js,... > cipher.html
+
